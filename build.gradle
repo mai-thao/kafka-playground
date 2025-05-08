@@ -14,6 +14,15 @@ dependencies {
     implementation 'org.apache.kafka:kafka-clients:4.0.0'
 }
 
-application {
+// Create 2 custom tasks to individually run the producer and consumer apps
+// More info on custom tasks: https://docs.gradle.org/current/userguide/tutorial_using_tasks.html
+// More info on tasks type "JavaExec": https://docs.gradle.org/current/dsl/#N10534
+tasks.register('runProducer', JavaExec) {
     mainClass = 'com.example.KafkaProducerApp'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+tasks.register('runConsumer', JavaExec) {
+    mainClass = 'com.example.KafkaConsumerApp'
+    classpath = sourceSets.main.runtimeClasspath
 }

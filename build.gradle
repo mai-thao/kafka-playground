@@ -3,7 +3,7 @@ plugins {
     id 'java'
 }
 
-group = 'demo'
+group = 'example'
 version = '1.0'
 
 repositories {
@@ -15,5 +15,5 @@ dependencies {
 }
 
 application {
-    mainClass = 'KafkaProducerApp'
+    mainClass = 'com.example.KafkaProducerApp'
 }

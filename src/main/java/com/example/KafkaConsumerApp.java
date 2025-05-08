@@ -14,7 +14,7 @@ public class KafkaConsumerApp {
         props.put("group.id", "demo-group");
         props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
-        props.put("auto.offset.reset", "earliest"); // Starts consuming from the beginning of the topic
+        props.put("auto.offset.reset", "earliest"); // Starts consuming from the beginning of the topic, more info: https://docs.confluent.io/platform/current/installation/configuration/consumer-configs.html#auto-offset-reset
 
         try (KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props)) {
             consumer.subscribe(Collections.singletonList("my-cool-topic"));

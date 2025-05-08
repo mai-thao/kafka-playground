@@ -12,7 +12,7 @@ public class KafkaProducerApp {
         props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
 
         try (KafkaProducer<String, String> producer = new KafkaProducer<>(props)) {
-            producer.send(new ProducerRecord<>("test-topic", "key1", "Hello from Java!"));
+            producer.send(new ProducerRecord<>("my-cool-topic", "key1", "Hello from Java!"));
             System.out.println("Message sent.");
         }
     }

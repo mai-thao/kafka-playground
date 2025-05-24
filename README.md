@@ -1,6 +1,6 @@
 # kafka-playground
 
-Kafka is a distributed event streaming platform. It lets us send, store, and process large volume of data in real time. I like to think of Kafka as a fast, durable, and highly scalable message queue.
+[Kafka](https://kafka.apache.org) is a distributed event streaming platform. It lets us send, store, and process large volume of data in real time. I like to think of Kafka as a fast, durable, and highly scalable message queue.
 
 Data is sent and recieved as key-value messages, and they are organized into topics. Those topics are split into partitions which are spread out across cluster of brokers. Those clusters are like a group of servers working together so it can handle large data volume in parallel and be fault tolerant in case one broker fails.
 

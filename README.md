@@ -11,6 +11,10 @@ In this project, I created a simple **Java** app that has a producer (the compon
       * The Kafka container stores the topic and data
       * The Zookeeper handles the cluster coordination, topic/partition metadata, configurations, etc. But, in my example, we're using the [confluentinc Docker image](https://hub.docker.com/r/confluentinc/cp-kafka) which defaults to just one single-broker
 
+## Instructions for Python
+TODO
+
+## Instructions for Java
 ### How to run the app
 1) Start up the Docker containers with the command: `docker-compose up -d`
 2) Open two different terminals and execute both these commands:
@@ -26,14 +30,14 @@ Received: key = key1, value = Hello from Java!
 4) Stop the consumer app with Ctrl + C
 5) Stop the Docker containers with the command: `docker compose down`
 
-### Consuming using Kafka CLI
+## Consuming using Kafka CLI
 This project shows how to consume from a Kafka topic using a simple Java consumer. Alternatively, you can consume message right in your terminal without a Java app. Here are the different Kafka CLI:
 * via Kafka CLI: https://docs.confluent.io/kafka/operations-tools/kafka-tools.html#kafka-console-consumer-sh
 * via kcat: https://docs.confluent.io/platform/current/tools/kafkacat-usage.html
 
 These tools are helpful for when you're given a topic and need to understand the format of the topic by consuming some sample messages. It'll give insights like what fields are in each message, what kind of data it carries, its event timestamps, keys it has, etc. 
 
-### Notes
+## Notes
 
 As you can see, Kafka is super helpful because it acts like a middle-man that stores large volume of messages between two different systems. It loosely decouples those two systems so they don't talk to each directly and can send and process large volume of data at different speeds. 
 
